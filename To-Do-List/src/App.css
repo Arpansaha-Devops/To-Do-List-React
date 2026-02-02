@@ -1,0 +1,126 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Page background */
+body {
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* App container */
+#root {
+  background: #ffffff;
+  width: 420px;
+  padding: 25px;
+  border-radius: 14px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.25);
+}
+
+/* Title */
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+/* Input & Add button */
+input {
+  width: 70%;
+  padding: 10px;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  outline: none;
+  font-size: 14px;
+}
+
+input:focus {
+  border-color: #667eea;
+}
+
+button {
+  padding: 10px 12px;
+  margin-left: 6px;
+  border: none;
+  border-radius: 8px;
+  background: #667eea;
+  color: white;
+  cursor: pointer;
+  font-size: 14px;
+  transition: all 0.25s ease;
+}
+
+button:hover {
+  background: #5563d6;
+  transform: scale(1.05);
+}
+
+/* Task list */
+ol {
+  margin-top: 20px;
+  list-style-position: inside;
+}
+
+/* Task item */
+li {
+  background: #f4f6ff;
+  margin-bottom: 10px;
+  padding: 10px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  animation: fadeIn 0.3s ease;
+}
+
+/* Task text */
+li span {
+  flex: 1;
+  color: #333;
+}
+
+/* Action buttons */
+li button {
+  margin-left: 6px;
+  padding: 6px 8px;
+  font-size: 13px;
+}
+
+/* Delete button */
+li button:first-of-type {
+  background: #ff5c5c;
+}
+
+li button:first-of-type:hover {
+  background: #e04848;
+}
+
+/* Up & Down buttons */
+li button:nth-of-type(2),
+li button:nth-of-type(3) {
+  background: #48bb78;
+}
+
+li button:nth-of-type(2):hover,
+li button:nth-of-type(3):hover {
+  background: #38a169;
+}
+
+/* Small animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(5px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
