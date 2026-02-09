@@ -14,9 +14,7 @@ if (newTask.trim() !== "") {
  setTask(Task => [...Task,newTask])
   setnewTask("")
 }
- 
-
-  
+   
 }
 
 function removeTask(index) {
@@ -26,8 +24,8 @@ function removeTask(index) {
 function moveTaskUp(index) {
   if (index === 0) return
 
-  const updated = [...Task]
-  ;[updated[index], updated[index - 1]] =
+  const updated = [...Task];
+  [updated[index], updated[index - 1]] =
     [updated[index - 1], updated[index]]
 
   setTask(updated)
